@@ -30,16 +30,17 @@ class TicTacToeNode
         if board.empty?([idx1, idx2])
           
           new_board = board.dup
-          # p new_board
-          new_board.board.place_mark([idx1, idx2], mark)
+          p new_board
+          new_board.rows.place_mark([1,1], :x)
+          p new_board
           
-          # p new_board
+          # # p new_board
           child = TicTacToeNode.new(new_board, mark)
-          children << child
+          # children << child
         end
       end
     end
-    children
+    p children
 
   end
 end
